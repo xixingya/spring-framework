@@ -4,6 +4,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import tech.xixing.aware.MyAware;
+import tech.xixing.entity.User;
 import tech.xixing.service.WelcomeService;
 
 /**
@@ -32,5 +34,9 @@ public class Entrance {
 		}
 		WelcomeService welcomeService =  context.getBean(WelcomeService.class);
 		welcomeService.sayHello("aaa");
+		final MyAware bean = context.getBean(MyAware.class);
+		bean.print();
+		final User user5 = context.getBean("user5", User.class);
+		System.out.println(user5);
 	}
 }
