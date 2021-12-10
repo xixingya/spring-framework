@@ -3,19 +3,13 @@ package tech.xixing.entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/**
- * @author liuzhifei
- * @version 1.0
- * @date 2021/11/15 7:32 PM
- */
 @Component
-public class User {
+public class Man {
 
 	@Autowired
-	private Man man;
+	private User user;
 
-
-	public User(){
-		System.out.println("user create");
+	public Man(){
+		System.out.println("man create");
 	}
 }

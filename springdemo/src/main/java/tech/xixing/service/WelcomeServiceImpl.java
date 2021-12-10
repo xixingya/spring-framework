@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * @date 2021/11/4 7:30 PM
  */
-@Service
+//@Service
 public class WelcomeServiceImpl implements WelcomeService{
 	@Override
 	public String sayHello(String name) {

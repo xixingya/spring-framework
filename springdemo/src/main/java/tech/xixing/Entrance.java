@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import tech.xixing.aware.MyAware;
+import tech.xixing.entity.Man;
 import tech.xixing.entity.User;
 import tech.xixing.service.WelcomeService;
 
@@ -13,7 +14,7 @@ import tech.xixing.service.WelcomeService;
  * @version 1.0
  * @date 2021/11/3 7:46 PM
  */
-@ComponentScan("tech.xixing")
+@ComponentScan("tech.xixing.entity")
 @Configuration
 public class Entrance {
 
@@ -32,11 +33,18 @@ public class Entrance {
 		for (String beanDefinitionName : beanDefinitionNames) {
 			System.out.println(beanDefinitionName);
 		}
-		WelcomeService welcomeService =  context.getBean(WelcomeService.class);
-		welcomeService.sayHello("aaa");
-		final MyAware bean = context.getBean(MyAware.class);
-		bean.print();
-		final User user5 = context.getBean("user5", User.class);
-		System.out.println(user5);
+//		WelcomeService welcomeService =  context.getBean(WelcomeService.class);
+//		welcomeService.sayHello("aaa");
+//		final MyAware bean = context.getBean(MyAware.class);
+//		bean.print();
+//		final User user5 = context.getBean("user5", User.class);
+//		System.out.println(user5);
+	}
+
+	public static void main3(String[] args){
+		final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+		context.register(Man.class);
+		context.register(User.class);
+		context.refresh();
 	}
 }

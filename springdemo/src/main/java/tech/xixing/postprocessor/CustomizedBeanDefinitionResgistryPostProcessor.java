@@ -18,10 +18,10 @@ import tech.xixing.entity.User;
 public class CustomizedBeanDefinitionResgistryPostProcessor implements BeanDefinitionRegistryPostProcessor {
 	@Override
 	public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
-		Class<?> clazz = User.class;
-		final BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(clazz);
-		final AbstractBeanDefinition rawBeanDefinition = beanDefinitionBuilder.getRawBeanDefinition();
-		registry.registerBeanDefinition("user5",rawBeanDefinition);
+//		Class<?> clazz = User.class;
+//		final BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(clazz);
+//		final AbstractBeanDefinition rawBeanDefinition = beanDefinitionBuilder.getRawBeanDefinition();
+//		registry.registerBeanDefinition("user5",rawBeanDefinition);
 	}
 
 	@Override
