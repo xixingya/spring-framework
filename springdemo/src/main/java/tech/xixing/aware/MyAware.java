@@ -5,6 +5,7 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.CollectionFactory;
 
 /**
  * @author liuzhifei

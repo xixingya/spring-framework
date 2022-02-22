@@ -3,27 +3,24 @@ plugins {
 }
 
 group 'org.springframework'
-version '5.2.18.BUILD-SNAPSHOT'
+version '5.2.14.BUILD-SNAPSHOT'
+
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
-
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-core
     implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.1.7'
-
+// https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
-
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+
     compile(project(":spring-context"))
-    compile(project(":spring-jdbc"))
     testCompile group: 'junit', name: 'junit', version: '4.12'
-
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
-
-    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.5'
-
-    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.5'
 }
