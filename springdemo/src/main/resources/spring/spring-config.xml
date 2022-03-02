@@ -5,4 +5,11 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean id="welcomeService" class="tech.xixing.service.WelcomeServiceImpl" />
+
+	<bean id="indexDao" class="tech.mybatis.bean.CustomFactoryBean">
+		<property name="mapperInterface" value="tech.mybatis.dao.IndexDao"></property>
+	</bean>
+	<bean id="indexDao2" class="tech.mybatis.bean.CustomFactoryBean">
+		<property name="mapperInterface" value="tech.mybatis.dao.IndexDao"></property>
+	</bean>
 </beans>

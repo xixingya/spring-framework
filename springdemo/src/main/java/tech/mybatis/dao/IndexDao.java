@@ -1,6 +1,9 @@
 package tech.mybatis.dao;
 
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  *
@@ -10,5 +13,7 @@ import org.springframework.stereotype.Component;
  */
 public interface IndexDao {
 
+	@Select("select * from test")
+	List<String> list();
 
 }
