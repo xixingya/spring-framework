@@ -14,7 +14,8 @@ import tech.mybatis.processor.CustomFactoryBeanDefinitionRegisterPostProcessor;
 @Configuration
 @ComponentScan(value = "tech.mybatis")
 @Import(CustomFactoryBeanDefinitionRegisterPostProcessor.class)
+@CustomScan("tech.mybatis.dao")
 //@ImportResource("classpath:spring/spring-config.xml")
-@MapperScan
+//@MapperScan("tech.mybatis.dao")
 public class AppConfig {
 }
