@@ -14,7 +14,7 @@ public class A {
 	B b;
 
 	//这样子是可以装配成功的，半自动
-	@Autowired
+	//@Autowired
 	C c1;
 
 
@@ -24,6 +24,10 @@ public class A {
 
 	public void setB(B b) {
 		this.b = b;
+	}
+
+	public void setC1(C c1) {
+		this.c1 = c1;
 	}
 
 	public void printInfo(){

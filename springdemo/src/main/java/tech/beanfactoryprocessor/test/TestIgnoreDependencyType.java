@@ -12,7 +12,7 @@ import tech.beanfactoryprocessor.bean.B;
  * @author liuzhifei
  * @date 2022/3/7 7:46 下午
  */
-@Component
+//@Component
 public class TestIgnoreDependencyType implements BeanFactoryPostProcessor {
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {

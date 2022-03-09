@@ -11,7 +11,7 @@ import tech.beanfactoryprocessor.bean.A;
  * @author liuzhifei
  * @date 2022/3/7 7:10 下午
  */
-@Component
+//@Component
 public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {

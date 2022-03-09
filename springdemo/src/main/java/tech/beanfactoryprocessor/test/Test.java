@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import tech.beanfactoryprocessor.bean.A;
+import tech.beanfactoryprocessor.bean.X1;
 
 /**
  * @author liuzhifei
@@ -18,6 +19,7 @@ public class Test {
 		try{
 			AnnotationConfigApplicationContext context =new AnnotationConfigApplicationContext(Test.class);
 			context.getBean(A.class).printInfo();
+			context.getBean(X1.class).printY();
 		}catch (Exception e){
 			e.printStackTrace();
 		}
